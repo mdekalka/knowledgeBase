@@ -242,6 +242,12 @@ body {
   font: normal 20px 'Georgia';
   background: rgba(45, 182, 207, 0.9);
 }
+.info-container .info-block .info-image {
+  width: 69px;
+  height: 92px;
+  margin: 25px auto 0;
+  background: transparent url(../img/icons.png) -267px 0 no-repeat;
+}
 .info-container .code-comments {
   padding: .6em;
   margin: .5em 0;
