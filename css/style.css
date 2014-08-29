@@ -1,0 +1,267 @@
+/* http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+css-extras+clike+javascript+scss+http */
+/**
+ * prism.js Dark theme for JavaScript, CSS and HTML
+ * Based on the slides of the talk “/Reg(exp){2}lained/”
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: white;
+  text-shadow: 0 -0.1em 0.2em #000000;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: #000;
+}
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-left: 5px solid #34c2db;
+}
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .15em .2em .05em;
+  border-radius: .3em;
+  border: 0.13em solid #7a6652;
+  box-shadow: 1px 1px 0.3em -0.1em #000000 inset;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #998066;
+}
+.token.punctuation {
+  opacity: .7;
+}
+.namespace {
+  opacity: .7;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: #9981FF;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: #F92672;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #A6E22E;
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #34c2db;
+}
+.token.regex,
+.token.important {
+  color: #e90;
+}
+.token.important {
+  font-weight: bold;
+}
+.token.entity {
+  cursor: help;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font: normal 16px 'Georgia', Helvetica, serif;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+  background: #fff 0 0 repeat;
+  color: #000;
+}
+.wrapper {
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  background: #1a252f;
+}
+.main-nav {
+  background: #000;
+  border-bottom: 2px solid #34c2db;
+}
+.main-nav ul {
+  text-align: center;
+  font-size: 0;
+}
+.main-nav li {
+  display: inline-block;
+  font-size: 16px;
+}
+.main-nav li:hover a {
+  background: #34c2db;
+}
+.main-nav li.active a {
+  background: #34c2db;
+}
+.main-nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  background: #000;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.code-container {
+  color: #fff;
+}
+.code-container-block {
+  padding: 25px 30px;
+}
+.info-container {
+  background: #000;
+}
+.info-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.info-container .info-nav {
+  float: right;
+  width: 300px;
+  padding: 20px 10px;
+}
+.info-container .info-nav li.active a {
+  border-width: 20px;
+  padding-left: 25px;
+  color: #34c2db;
+}
+.info-container .info-nav a {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #34c2db;
+  text-decoration: none;
+  color: #fff;
+  font: normal 18px 'Georgia';
+  -webkit-transition: padding 0.2s linear, border 0.2s ease;
+  -moz-transition: padding 0.2s linear, border 0.2s ease;
+  transition: padding 0.2s linear, border 0.2s ease;
+}
+.info-container .info-nav a:hover {
+  border-width: 20px;
+  padding-left: 25px;
+  color: #34c2db;
+}
+.info-container .code-title {
+  padding: .6em;
+  margin: .5em 0;
+  border-left: 5px solid #a6e22e;
+  text-align: center;
+  color: #a6e22e;
+  font: normal 22px Consolas, Monaco, 'Andale Mono', monospace;
+}
+.info-container .info-block {
+  padding: 10px 20px 20px 20px;
+  margin-right: 300px;
+}
+.info-container .info-block h2 {
+  padding: 8px 10px;
+  text-align: center;
+  color: #ecf0f1;
+  font: normal 20px 'Georgia';
+  background: rgba(45, 182, 207, 0.9);
+}
+.info-container .code-comments {
+  padding: .6em;
+  margin: .5em 0;
+  border-left: 5px solid #f1c40f;
+  text-align: center;
+  color: #f1c40f;
+  font: normal 22px Consolas, Monaco, 'Andale Mono', monospace;
+}
+.info-container .comments-text {
+  border-left: 5px solid #34495e;
+  padding: 0 15px;
+}
+.info-container .comments-text p {
+  margin-bottom: 10px;
+  font: normal 18px/1.2 'Georgia';
+  color: #ecf0f1;
+}
+.info-container .comments-text .comments-pre {
+  margin-bottom: 10px;
+  font: normal 18px/1.2 'Georgia';
+  color: #ecf0f1;
+}
+.info-container .comments-text .highlight-green {
+  color: #a6e22e;
+}
+.info-container .comments-text .highlight-blue {
+  color: #34c2db;
+}
+.for-footer {
+  height: 130px;
+}
+footer {
+  width: 1200px;
+  height: 130px;
+  margin: -130px auto 0;
+  padding: 10px 20px;
+  border-top: 3px solid #34c2db;
+  background: #000;
+}
+footer .footer-magic {
+  position: relative;
+  text-align: center;
+}
+footer quote {
+  display: block;
+  margin-bottom: 5px;
+  color: #34c2db;
+}
+footer p {
+  color: #bdc3c7;
+}
+footer img {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin-top: 10px;
+}

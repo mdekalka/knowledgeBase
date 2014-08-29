@@ -1,0 +1,119 @@
+/* http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+css-extras+clike+javascript+scss+http */
+/**
+ * prism.js Dark theme for JavaScript, CSS and HTML
+ * Based on the slides of the talk “/Reg(exp){2}lained/”
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: white;
+    text-shadow: 0 -.1em .2em black;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+    background: #000;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-left: 5px solid @lightBlue;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .15em .2em .05em;
+    border-radius: .3em;
+    border: .13em solid hsl(30, 20%, 40%);
+    box-shadow: 1px 1px .3em -.1em black inset;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: hsl(30, 20%, 50%);
+}
+
+.token.punctuation {
+    opacity: .7;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+    color: #9981FF;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+    color: #F92672;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #A6E22E;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: @lightBlue;
+}
+
+.token.regex,
+.token.important {
+    color: #e90;
+}
+
+.token.important {
+    font-weight: bold;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+

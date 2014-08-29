@@ -1,0 +1,46 @@
+         <div class="info-container js-container" data-key="ajax-request">
+            <ul class="info-nav js-nav">
+                <li><a href="#">Ajax Request</a></li>
+                <li><a href="#">Ajax Request(promises)</a></li>
+                <li><a href="#">Get Elements</a></li>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+            </ul>
+            <div class="info-block">
+                <div class="info-block-content">
+                    <div class="code-title">AJAX Request</div>
+                    <pre><code class="language-javascript">
+function loadAjax(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = ajaxState;
+    function ajaxState() {
+        if (xhr.readyState === 4) {
+            var status = xhr.status;
+            if (status >= 200 &amp;&amp; status &lt; 300 || status === 304) {
+                var currentData = xhr.responseText;
+            } else {
+                console.log('Error');
+            };
+        };
+    };
+    xhr.open('GET', url, true);
+    xhr.send();
+};
+
+loadAjax('url_string');
+                    </code></pre>
+                    <div class="code-comments">Comments</div>
+                    <div class="comments-text">
+                        <p>
+                            <span class="comments-highlight highlight-green">onreadystatchange </span>stores a function (or the name of a function) to be called automatically each time the readyState property changes.
+                        </p>
+                        <pre class="comments-pre"><span class="highlight-green">readyState </span>holds the status of the XMLHttpRequest. Changes from 0 to 4:
+                        <span class="highlight-green">0</span>: <span class="highlight-blue">request not initialized</span>
+                        <span class="highlight-green">1</span>: <span class="highlight-blue">server connection established</span>
+                        <span class="highlight-green">2</span>: <span class="highlight-blue">request received</span>
+                        <span class="highlight-green">3</span>: <span class="highlight-blue">request received</span>
+                        <span class="highlight-green">4</span>: <span class="highlight-blue">request finished and response is ready</span></pre>
+                    </div>
+                </div>
+            </div>  
+        </div>
