@@ -1,4 +1,13 @@
 ;(function(undefined) {
+jQuery(document).ready(function($) {
+        
+
+
+    /*================================================================
+                        >>> ADD ROUTER(BACKBONE) <<<  
+      ================================================================*/
+    var addRouter = addRouter || {};
+    addRouter.router = new Router();
 
     /*================================================================
                         >>> APP MODULE <<<  
@@ -7,20 +16,18 @@
         /*================================================================
                     >>> VARIABLES <<<  
         ================================================================*/
-        var dynamicContent = document.querySelector('.code-container-dynamic'),
-            menuBtns = document.querySelectorAll('.btn-main'),
-            mainNavLists = document.querySelectorAll('.main-nav li'),
-            loader = document.querySelector('.loader');
+        var dynamicContent = $('.code-container-dynamic'),
+            menuBtns = $('.btn-main'),
+            asideLinks = $('.info-nav  a'),
+            loader = $('.loader'),
+            infoContainers = $('.info-container'),
+            currentArticle = "";
 
         /*================================================================
                             >>> HELPERS FUNCTION <<<  
           ================================================================*/
-        function removeClass(element, className) {
-            var reg = new RegExp(className, "g");
-            for (var i = 0, l = element.length; i < l; i++) {
-                element[i].className = element[i].className.replace(reg,'');
-            };
-        };
+
+        //***==========================================================***//
 
         function ajaxLoad(url) {
             var xhr = new XMLHttpRequest(),
@@ -35,7 +42,7 @@
                         addLoadedPage(data);
                         Prism.highlightAll(data);
                     } else {
-                        console.log('Error');
+                        $('.' + currentArticle + '-container').find('.info-block').empty()    
                     };
                 };
             };
@@ -44,36 +51,44 @@
         };
 
         function addLoadedPage(content) {
-            dynamicContent.innerHTML = content;
-        }
+            $('.' + currentArticle + '-container').find('.info-block').empty().append(content);
+        };
 
         /*================================================================
                             >>> HANDLERS <<<  
           ================================================================*/
         setListeners();   
         function setListeners() {
+            menuBtns.on('click', mainMenuCallback);
+            asideLinks.on('click', asideMenuCallback)
 
-            hangListeners(menuBtns);
-            function hangListeners(el) {
-                for (var i = 0, l = el.length; i < l; i++) {
-                    el[i].addEventListener('click', callBackListener);
-                };
-            };    
+        };
+        //***==========================================================***//
+
+        function mainMenuCallback() {
+            var self = $(this);
+            currentArticle = self.attr("href").replace("#", "");
         };
 
-        function callBackListener() {
-            var self = this;
+        function asideMenuCallback() {
+            var self = $(this),
+                linkTarget = self.data("link");
+            asideLinks.closest('li').removeClass('active')
+            self.closest('li').addClass('active');
 
-            if ( !self.parentNode.className.match(/(?:^|\s)active(?!\S)/) ) {
-                removeClass(mainNavLists, 'active');
-                self.parentNode.className += " active";
-            };
-
-            if (self.dataset.attr = "js") {
-                var getPage = ajaxLoad('pages/JavaScript/javascript.html');
-
+            loadArticle();
+            function loadArticle() {
+                if (currentArticle !== undefined && linkTarget !== undefined) {
+                   ajaxLoad('pages/' + currentArticle + '/' + linkTarget + '.html');  
+                }
+                
             };
         };
+
+
+
+
+
 
 
 
@@ -84,4 +99,6 @@
 
 
     })(); //end of app
+
+});    
 })();

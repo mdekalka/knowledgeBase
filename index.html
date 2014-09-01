@@ -25,31 +25,116 @@
 <div class="wrapper">
     <nav class="main-nav">
         <ul>
-            <li><a class="btn-main btn-html" href="#" data-attr="html">HTML</a></li>
-            <li><a class="btn-main btn-css" href="#" data-attr="css">CSS</a></li>
-            <li><a class="btn-main btn-js" href="#" data-attr="js">JavaScript</a></li>
-            <li><a class="btn-main btn-jq" href="#" data-attr="jq">jQuery</a></li>
-            <li><a class="btn-main btn-sass" href="#" data-attr="sass">SASS</a></li>
-            <li><a class="btn-main btn-less" href="#" data-attr="less">LESS</a></li>
-            <li><a class="btn-main btn-other" href="#" data-attr="other">Other</a></li>
+            <li><a class="btn-main btn-html" href="#html">HTML</a></li>
+            <li><a class="btn-main btn-css" href="#css">CSS</a></li>
+            <li><a class="btn-main btn-js" href="#javascript">JavaScript</a></li>
+            <li><a class="btn-main btn-jq" href="#jquery">jQuery</a></li>
+            <li><a class="btn-main btn-sass" href="#sass">SASS</a></li>
+            <li><a class="btn-main btn-less" href="#less">LESS</a></li>
+            <li><a class="btn-main btn-other" href="#other">Other</a></li>
         </ul>
     </nav>
-    <div class="loader">
-        <div class="loader-line1"></div>
-        <div class="loader-line2"></div>
-        <div class="loader-line3"></div>
-        <div class="loader-line4"></div>
-        <div class="loader-line5"></div>
-    </div>
     <div class="code-container">
         <div class="code-container-block">
             <div class="code-container-dynamic">
                 <!-- dynami content here -->
-                eto istoriy ya napishu doma na vihodnuh. Kogda otdohnu ot raboti i naberus motivacii na sozdanie etogo saite. Nadeus on mne pomojet v budus4em.
+                <div class="info-container main-container">
+                    <p>Welcome, Aleh.</p>
+                    <p>If you come to this page it means that you do not give up and your motivation is still alive.</p>
+                    <p>People lives only once so stay true with yourself and never let break your will.</p>
+                    <div class="main-indent">
+                        <p>And remember...</p>
+                        <p>there is no way back from here.</p>         
+                    </div>   
+                </div> <!-- main page content -->
+
+                <div class="info-container javascript-container hide">
+                    <ul class="info-nav js-nav">
+                        <li><a data-link="ajaxRequest" href="#js">Ajax Request</a></li>
+                        <li><a data-link="ajaxReqProm" href="#js">Ajax Request(promises)</a></li>
+                        <li><a data-link="getElements" href="#js">Get Elements</a></li>
+                    </ul>
+                    <div class="info-block">
+                        <!-- info include here -->
+                        <h2>JavaScript</h2>
+                    </div>  
+                </div> <!-- JS content -->
+
+                <div class="info-container jquery-container hide">
+                    <ul class="info-nav jq-nav">
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                    </ul>
+                    <div class="info-block">
+                        <!-- info include here -->
+                        <h2>jQuery</h2>
+                    </div>  
+                </div>   <!-- JQUERY content -->
+
+                <div class="info-container html-container hide">
+                    <ul class="info-nav html-nav">
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                    </ul>
+                    <div class="info-block">
+                        <!-- info include here -->
+                        <h2>HTML</h2>
+                    </div>  
+                </div>   <!-- HTML content -->
+
+                <div class="info-container css-container hide">
+                    <ul class="info-nav css-nav">
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                    </ul>
+                    <div class="info-block">
+                        <!-- info include here -->
+                        <h2>CSS</h2>
+                    </div>  
+                </div>    <!-- CSS content -->
+
+                <div class="info-container less-container hide">
+                    <ul class="info-nav less-nav">
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                    </ul>
+                    <div class="info-block">
+                        <!-- info include here -->
+                        <h2>LESS</h2>
+                    </div>  
+                </div>    <!-- LESS content -->
+
+                <div class="info-container sass-container hide">
+                    <ul class="info-nav sass-nav">
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                    </ul>
+                    <div class="info-block">
+                        <!-- info include here -->
+                        <h2>SASS</h2>
+                    </div>  
+                </div>    <!-- SASS content -->    
+
+                <div class="info-container other-container hide">
+                    <ul class="info-nav other-nav">
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li>
+                    </ul>
+                    <div class="info-block">
+                        <!-- info include here -->
+                        <h2>Other</h2>
+                    </div>  
+                </div>    <!-- OTHER content -->                            
+
             </div>
             <div class="for-footer"></div> 
         </div>
-           
     </div>
 </div>
 <footer>
@@ -57,22 +142,29 @@
         <div class="footer-img">
             <img src="img/footer-logo.png" alt="">
             <div class="footer-tip">
-                <quote>“If at first you don’t succeed, try, try again.”(c)</quote>
             </div>
         </div>
         <p>Created by piupiupiu for personal usage &copy; 2014</p>
     </div>
 </footer>
 
-
-
+<div class="loaderLayout">
+    <div class="loader">
+        <div class="loader-line1"></div>
+        <div class="loader-line2"></div>
+        <div class="loader-line3"></div>
+        <div class="loader-line4"></div>
+        <div class="loader-line5"></div>
+    </div>    
+</div>
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="htpps://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-<script src="htpps://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
 <script src="js/libs/prism.js"></script>
+<script src="js/routing.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
